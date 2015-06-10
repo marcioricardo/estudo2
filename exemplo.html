@@ -16,7 +16,16 @@
 		<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quia deleniti autem nostrum quidem amet aliquam, doloremque! Deserunt culpa, laudantium."</p><p><small>Márcio Navegantes</small></p>
 	</blockquote><br></div></section>
 <div class="container">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ex, laboriosam. Voluptatibus nam optio ipsum dolorum beatae eaque aliquid voluptates doloribus, delectus placeat ut sit provident, quod impedit aliquam fugiat ex aspernatur officiis aperiam vitae ea cupiditate natus fuga. Sed enim alias officiis consequuntur minima, cumque quaerat facere dolorum. Illum autem dignissimos, aliquam mollitia consectetur nam aspernatur facere. Commodi, perspiciatis, sit. Molestias, a dignissimos. Quo dignissimos amet minima, animi blanditiis quae, odit iste. Culpa reiciendis tempore, dicta obcaecati amet dolor ea voluptates laboriosam, accusamus excepturi modi praesentium ipsa quod commodi, animi quis aut corporis earum perspiciatis officiis blanditiis corrupti at distinctio optio. Quo minus rem saepe at? Ut, mollitia. Temporibus blanditiis voluptatem perspiciatis. Et quod quasi, explicabo eligendi temporibus consequatur, autem, voluptates commodi libero eaque enim, a suscipit! Molestias reprehenderit similique ut, omnis. Quaerat quas autem possimus! Dignissimos deleniti id vero unde repellat animi quis beatae cupiditate, provident, consequatur corporis quam aspernatur quaerat recusandae laboriosam neque enim optio illum suscipit non ad! Animi repellat assumenda culpa laborum corporis. Sequi, earum aspernatur, omnis voluptas non quae perspiciatis tempora aliquid quod iure in dolore nisi, sunt quibusdam nulla deleniti qui ipsa natus repellat hic ullam eius blanditiis. Sapiente rerum, dolorum ab nihil!</p>
+	<p>É preciso linkar a branch local com a brach remota, para que o GitHub entenda que estou adicionando conteúdo a uma branch que ele já possui. Por isso preciso de um comando que diga que eu estou lhe enviando uma nova branch que foi criada em meu repositório local. <code>git push <b> -u </b> origin design</code> Para uma branch com nome "design".</p>
+	<p>Agora posso usar <code>git pull</code>dentro de minha brach local para traser consteúdo que possa ter sido incluído no GitHub por outro usuário</p><br><br>
+
+<p><code>Git branch -r</code> Exibe as branchs remotas que estão mapeadas.</p>
+<p>Se usar <code>git pull</code> podemos ver se há alguma branch remota que ainda não foi mapeada</p><br><br>
+
+	<p>Se eu quiser incluir em meu repositório local uma branch que está no GitHub o comando será: <code>git branch -t design origin/design</code> Com isso crio uma nova branch chamada design que já estará linkada com a branch remota de mesmo nome. </p><br><br>
+
+	<p>Agora posso usar inclusive <code>git log</code> para ver as alterações realizadas por outros usuários.</p>
+
 </div>
 </body>
 </html>
