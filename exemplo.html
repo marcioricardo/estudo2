@@ -3,29 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Modelo para Testar o Git</title>
+	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+<section class="preto">
+<div class="container"><h1>Testando a Gravação com Commit</h1></div></section>
 <div class="container">
-	<h1>Testando a Gravação com Commit</h1>
-	<p>Primeiro usar o comando <code>git add + nomedoarquivo</code></p>
-	<p>Depois usar <code>git commit -m + "Descrição do que foi alterado entre aspas"</code></p>
-	<p>Para enviar as alterações ao GitHub <code>git push origin master</code></p><small>Onde "origin" refere-se ao branch no GitHub  e "master" é o nosso repositório local.<br></small>
+<section class="texto">
+	<p>Primeiro usar o comando <code>git add + nomedoarquivo</code></p><br><br>
+	<p>Depois usar <code>git commit -m + "Descrição do que foi alterado entre aspas"</code></p><br><br>
+	<p>Para enviar as alterações ao GitHub <code>git push origin master</code></p><small>Onde "origin" refere-se ao GitHub  e "master" é o nosso repositório local.<br></small>
+	</section>
 </div>
 	<section class="facha">	<div class="container"><blockquote cite="Márcio Navegantes">
-		<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quia deleniti autem nostrum quidem amet aliquam, doloremque! Deserunt culpa, laudantium."</p><p><small>Márcio Navegantes</small></p>
+		<p>"Se estudar vai!"</p><p><small>Márcio Navegantes</small></p>
 	</blockquote><br></div></section>
 <div class="container">
+<section class="texto">
 	<p>É preciso linkar a branch local com a brach remota, para que o GitHub entenda que estou adicionando conteúdo a uma branch que ele já possui. Por isso preciso de um comando que diga que eu estou lhe enviando uma nova branch que foi criada em meu repositório local. <code>git push <b> -u </b> origin design</code> Para uma branch com nome "design".</p>
-	<p>Agora posso usar <code>git pull</code>dentro de minha brach local para traser consteúdo que possa ter sido incluído no GitHub por outro usuário</p><br><br>
+	<p>Agora posso usar <code>git pull</code>dentro de minha brach local para trazer consteúdo que possa ter sido incluído no GitHub por outro usuário</p><br><br>
 
-<p><code>Git branch -r</code> Exibe as branchs remotas que estão mapeadas.</p>
-<p>Se usar <code>git pull</code> podemos ver se há alguma branch remota que ainda não foi mapeada</p><br><br>
+	<p><code>Git branch -r</code> Exibe as branchs remotas que estão mapeadas.</p>
+	<p>Se usar <code>git pull</code> podemos ver se há alguma branch remota que ainda não foi mapeada.</p><br><br>
 
 	<p>Se eu quiser incluir em meu repositório local uma branch que está no GitHub o comando será: <code>git branch -t design origin/design</code> Com isso crio uma nova branch chamada design que já estará linkada com a branch remota de mesmo nome. </p><br><br>
 
 	<p>Agora posso usar inclusive <code>git log</code> para ver as alterações realizadas por outros usuários.</p>
-
+</section>
 </div>
 </body>
 </html>
