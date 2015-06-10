@@ -1,5 +1,5 @@
 body{
-	background-color: #095555;
+	background-color: #095577;
 	text-align: left;
 	color: lightgray;
 	font-size: 18px;
@@ -8,12 +8,45 @@ body{
 
 h1{
 	font-family: Helvetica;
-	color: #000000;
+	color: #ffff99;
 	font-weight: bolder;
+	margin-bottom: 50px;
+	font-size: 40px;
 }
 
 code{
 	background-color: white;
 	color: #000000;
 	font-size: 20px;
+}
+
+.facha{
+	background: url(../../programação/site-d2/img/back/berhouma.jpg) no-repeat center fixed;
+	background-size: cover;
+	padding: 150px;
+}
+
+h2{
+	text-align: right;
+	color: white;
+	font-weight: bold;
+	font-size: 28px;
+}
+
+h3{
+	text-align: right;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+}
+.container{
+	width: 720px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+blockquote{
+	text-align: right;
+	font-size: 28px;
+	color: white;
 }
