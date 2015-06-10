@@ -24,6 +24,8 @@
 		</div>
 	</section>
 <div class="container">
+
+	<h2>Igualando o Repositório Local ao GitHub</h2>
 	<section class="texto">
 		<p>É preciso linkar a branch local com a brach remota, para que o GitHub entenda que estou adicionando conteúdo a uma branch que ele já possui. Por isso preciso de um comando que diga que eu estou lhe enviando uma nova branch que foi criada em meu repositório local. <code>git push <b> -u </b> origin design</code> Para uma branch com nome "design".</p>
 		<p>Agora posso usar <code>git pull</code>dentro de minha brach local para trazer consteúdo que possa ter sido incluído no GitHub por outro usuário</p><br><br>
@@ -35,6 +37,32 @@
 
 		<p>Agora posso usar inclusive <code>git log</code> para ver as alterações realizadas por outros usuários.</p>
 	</section>
+</div>
+<section class="facha2">
+	<div class="container">
+			<blockquote cite="Márcio Navegantes">
+				<p>"Sempre em frente!"</p><p><small>Márcio Navegantes</small></p>
+			</blockquote>
+		</div>
+</section>
+<div class="container">
+	<section class="texto">
+		<p> Para evitar conflitos o Git pode executar um "Merge" no arquivo. Nesse caso ele exibe uma mensagem avisando que isso ocorreu. Caso não consiga ele exibe um erro. Nesse caso será preciso fazer um <code>git pull</code> e corrigir o arquivo manualmente.</p>
+		<p>Após o arquivo corrigido, fazer um <code>git push</code> Para enviar ao GitHub o arquivo corrigido.</p>
+	
+		<h2>Boas Práticas Para Evitar Conflitos:</h2>
+
+		<p>É preciso seguir um fluxo de trabalho bem defnido afim de evitar conflitos registrados no log.</p>
+		<p>Para isso preciso sempre checar se há alguma alteração no arquivo que eu estou modificando e caso haja realizar um "merge" local. Enviando somente após isso o arquivo atualizado ao GitHub.</p><br>
+
+		O processo para que isso aconteça é o seguinte: 
+
+
+
+
+
+	</section>
+
 </div>
 </body>
 </html>
