@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Modelo para Testar o Git</title>
+	<title>Git - Consulta Rápida</title>
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 <section class="preto">
-<div class="container"><h1>Testando a Gravação com Commit</h1></div></section>
+<div class="container"><h1>GIT - Guia para consulta Rápida</h1></div></section>
 <div class="container">
+	<h2>Iniciando o Git</h2>
 	<section class="texto">
-		<p>Primeiro usar o comando <code>git add + nomedoarquivo</code></p><br><br>
+		<p>Dentro da pasta a ser usada executar <code>git ini</code></p><br><br>
+		<p>Usar o comando <code>git add + nomedoarquivo</code></p><br><br>
 		<p>Depois usar <code>git commit -m + "Descrição do que foi alterado entre aspas"</code></p><br><br>
 		<p>Para enviar as alterações ao GitHub <code>git push origin master</code></p><small>Onde "origin" refere-se ao GitHub  e "master" é o nosso repositório local.<br></small>
 	</section>
@@ -46,6 +48,7 @@
 		</div>
 </section>
 <div class="container">
+	<h2>Merge Automático</h2>
 	<section class="texto">
 		<p> Para evitar conflitos o Git pode executar um "Merge" no arquivo. Nesse caso ele exibe uma mensagem avisando que isso ocorreu. Caso não consiga ele exibe um erro. Nesse caso será preciso fazer um <code>git pull</code> e corrigir o arquivo manualmente.</p>
 		<p>Após o arquivo corrigido, fazer um <code>git push</code> Para enviar ao GitHub o arquivo corrigido.</p>
@@ -55,7 +58,18 @@
 		<p>É preciso seguir um fluxo de trabalho bem defnido afim de evitar conflitos registrados no log.</p>
 		<p>Para isso preciso sempre checar se há alguma alteração no arquivo que eu estou modificando e caso haja realizar um "merge" local. Enviando somente após isso o arquivo atualizado ao GitHub.</p><br>
 
-		O processo para que isso aconteça é o seguinte: 
+		<p>O processo para que isso aconteça é o seguinte:</p><br>
+		<ul>
+			<li><code>git add</code> Para adicionar os arquivos modificados.</li>
+			<li><code>git commit -m "descrição"</code> Para commitar localmente.</li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
 
 
 
