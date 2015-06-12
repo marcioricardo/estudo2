@@ -8,6 +8,12 @@ body{
 	font-family: Verdana;
 }
 
+/*#icone{
+	float: left;
+	position: relative;
+	width: 80px;*/
+} 
+
 .preto{
 	background-color: black;
 	padding: 2px 0;
@@ -25,24 +31,31 @@ h1{
 code{
 	background-color: white;
 	color: #000000;
-	font-size: 20px;
+	font-size: 18px;
 	border-radius: 8px;
-	padding: 3px 10px;
+	padding: 1px 8px;
 	margin: 0 5px;
 }
 
 .facha{
-	background: url(../../programação/site-d2/img/back/berhouma.jpg) no-repeat center fixed;
+	background: url(../../programação/site-d2/img/familia/2304.JPG) no-repeat center fixed;
 	background-size: cover;
-	padding: 150px;
-	margin: 30px 0;
+	padding: 110px 0;
+	margin: 40px 0;
 }
 
 .facha2{
 	background: url(../../programação/site-d2/img/back/colorful-sneakers.jpg) no-repeat center fixed;
 	background-size: cover;
-	padding: 150px;
-	margin: 30px 0;
+	padding: 110px 0;
+	margin: 40px 0;
+}
+
+.facha3{
+	background: url(../../programação/site-d2/img/back/car-in-the-beach.jpg) no-repeat center fixed;
+	background-size: cover;
+	padding: 80px 0;
+	margin: 40px 0;
 }
 
 h2{
@@ -50,8 +63,8 @@ h2{
 	color: white;
 	font-weight: bold;
 	font-size: 28px;
-	margin-top: 60px;
-	margin-bottom: 30px;
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
 h3{
@@ -81,6 +94,3 @@ blockquote p small{
 	font-style: italic;
 }
 
-.texto{
-	padding: 30px 0;
-}

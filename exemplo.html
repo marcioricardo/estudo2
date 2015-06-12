@@ -5,11 +5,14 @@
 	<title>Git - Consulta Rápida</title>
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="estilo.css">
+	<link rel="icon" href="git.ico">
+
 </head>
 <body>
 <section class="preto">
 <div class="container"><h1>GIT - Guia para consulta Rápida</h1></div></section>
 <div class="container">
+	<!--<img id="icone" src="git.ico" alt="">-->
 	<h2>Iniciando o Git</h2>
 	<section class="texto">
 		<p>Dentro da pasta a ser usada executar <code>git ini</code></p><br><br>
@@ -21,21 +24,22 @@
 	<section class="facha">	
 		<div class="container">
 			<blockquote cite="Márcio Navegantes">
-				<p>"Se estudar vai!"</p><p><small>Márcio Navegantes</small></p>
+				<p>"Espere no Senhor. Seja forte! Coragem! Espere no Senhor."</p><p><small>Salmos 27:14</small></p>
 			</blockquote>
 		</div>
 	</section>
 <div class="container">
 
 	<h2>Igualando o Repositório Local ao GitHub</h2>
+
 	<section class="texto">
-		<p>É preciso linkar a branch local com a brach remota, para que o GitHub entenda que estou adicionando conteúdo a uma branch que ele já possui. Por isso preciso de um comando que diga que eu estou lhe enviando uma nova branch que foi criada em meu repositório local. <code>git push <b> -u </b> origin design</code> Para uma branch com nome "design".</p>
+		<p>É preciso linkar a branch local com a brach remota, para que o GitHub entenda que estou adicionando conteúdo a uma branch que ele já possui. Por isso preciso de um comando que diga que eu estou lhe enviando uma nova branch que foi criada em meu repositório local.</p><p><code>git push <b> -u </b> origin design</code> Para uma branch com nome "design".</p>
 		<p>Agora posso usar <code>git pull</code>dentro de minha brach local para trazer consteúdo que possa ter sido incluído no GitHub por outro usuário</p><br><br>
 
 		<p><code>Git branch -r</code> Exibe as branchs remotas que estão mapeadas.</p>
 		<p>Se usar <code>git pull</code> podemos ver se há alguma branch remota que ainda não foi mapeada.</p><br><br>
 
-		<p>Se eu quiser incluir em meu repositório local uma branch que está no GitHub o comando será: <code>git branch -t design origin/design</code> Com isso crio uma nova branch chamada design que já estará linkada com a branch remota de mesmo nome. </p><br><br>
+		<p>Se eu quiser incluir em meu repositório local uma branch que está no GitHub o comando será:<br><code>git branch -t design origin/design</code> Com isso crio uma nova branch chamada design que já estará linkada com a branch remota de mesmo nome. </p><br><br>
 
 		<p>Agora posso usar inclusive <code>git log</code> para ver as alterações realizadas por outros usuários.</p>
 	</section>
@@ -43,7 +47,7 @@
 <section class="facha2">
 	<div class="container">
 			<blockquote cite="Márcio Navegantes">
-				<p>"Sempre em frente!"</p><p><small>Márcio Navegantes</small></p>
+				<p>"Sempre em frente! Não temos tempo a perder."</p><p><small>Renato Russo</small></p>
 			</blockquote>
 		</div>
 </section>
@@ -59,24 +63,46 @@
 		<p>Para isso preciso sempre checar se há alguma alteração no arquivo que eu estou modificando e caso haja realizar um "merge" local. Enviando somente após isso o arquivo atualizado ao GitHub.</p><br>
 
 		<p>O processo para que isso aconteça é o seguinte:</p><br>
-		<ul>
-			<li><code>git add</code> Para adicionar os arquivos modificados.</li>
-			<li><code>git commit -m "descrição"</code> Para commitar localmente.</li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
+		
+		<p>Criar uma branch local para trabalhar. Não é recomendado trabalhar direto na branch "Master".</p>
+		<p><code>git checkout -b desenvolvimento</code> Cria uma branch chamada desenvolvimento e já muda direto pra ela.</p>
+		<p>Torna-se necessário então transportar as alterações reapzadas na branch "desenvolvimento" para a branch "Master".</p>
+		<p>O primeiro passo é checar se a branch "Master" local que está conectada a branch remota, possui nova atuapzação. Alguma modificação feita enquanto trabalhávamos localmente.</p>
+		Executar então: <code>git checkout master</code> para mudar para a branch "Master" e depois <br><code>git pull</code> para buscar novas alterações feitas por outras pessoas.
+		<p>Se não ocorreram novas alterações no arquivo remoto, executar <code>git merge</code>. Dessa forma eu sincronizo o conteúdo da branch local "desenvolvimento" com a branch "Master" que via de regra é a branch usada por outros usuários remotos.</p>
+		<p><code>git push</code> Para sincronizar branch "Master" local com a branch "Master" remota.</p>
 
 
+		<h2>Evitando Merges Automáticos</h2> 
 
+		<p>Se for verificado que há novas alterações na branch "Master" que não usamos como base para o  denvolvimento de nosso arquivo, teremos um problema a resolver.</p>
+		<p>É nesse momento que caso simplesmente joguemos nosso conteúdo no "Master" ocorrerão merges automáticos. É isso que queremos evitar.</p>
+		<p>Devemos então usar o comando <code>git rebase</code>. Dessa forma poderemos indicar uma nova base de commits e resolver os possíveis conflitos commit por commit.</p><br>
 
+		<p>Para realizar esse procedimento devemos estar então na branch desenvolvimento.</p><p> <code>git checkout desenvolvimento</code>. E informar que a nova base dela é o último commit realizado na branch "Master". <code>git rebase master desenvolvimento</code></p>
+		<p>Feito isso, os commits realizados em desenvolvimento são movidos para uma branch temporária e o git atualiza a nova base de commits. Após essa atualização, o próprio Git traz de volta os commits que realizamos e os aplica sobre a nova base, um de cada vez.</p>
+		<p>Nesse momento, todos os commits estão aplicados e organizados na branch "desenvolvimento".</p><br>
 
-
+		<p>Agora, é necessário levar esses commits para a branch "master". Repare que é um processo diferente do rebase, onde apenas queríamos trocar a base de commits utilizada. Agora, é necessário colocar apenas os commits novos na branch "master", porém, para isso, existe o comando <br> <code>git merge</code> que move os commits de uma determinada branch para outra branch.</p>
+		<p>Para utilizá-lo, primeiro é preciso ir para a branch para a qual se quer levar os commits, no caso, a "master" <code>git checkout master</code>.</p>
+		<p>Em seguida, deve-se dizer para o comando git merge de qual branch virão os commits novos, que, no caso, é a branch "desenvolvimento". Para isso, basta executar <code>git merge desenvolvimento</code>.</p>
+		<p>Nesse instante, tem-se todos os novos commits na branch "master", prontos para serem enviados para o repositório remoto através do comando <code>git push</code>.</p>
 	</section>
-
 </div>
+
+<section class="facha3">
+	<div class="container">
+		<blockquote cite="Márcio Navegantes">
+			<p>"Não importa o que eu diga, creia e faça; sem amor, estou arruinado."</p><p><small>Coríntios 13.3b</small></p>
+		</blockquote>
+	</div>
+</section>
+
+<div class="container texto">
+
+<h2>Controle Avançado de Alterações</h2>
+
+
+
 </body>
 </html>
