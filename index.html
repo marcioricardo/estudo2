@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Git - Consulta Rápida</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="icon" href="img/git.ico">
+
+</head>
+<body>
+
+
+
+
+	<nav role:"navigation" class="navbar navbar-inverse navbar-fixed-top">
+		
+		<div class="navbar-header">
+			<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+				<span class="sr-only">Navegação Responsiva</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+
+			</button> 	
+			<p class="navbar-brand">GIT - Guia Express</p>
+		</div>
+
+		<div id="navbarCollapse" class="collapse navbar-collapse">
+			<ul id="meumenu" class="nav navbar-nav">
+				<li><a href="#iniciando">Iniciando</a></li>
+				<li><a href="#sincro">Sincronizando</a></li>
+				<li><a href="#merge">Merge Automático</a></li>
+				<li><a href="#boas">Boas Práticas</a></li>
+				<li><a href="#controle">Controle Avançado</a></li>
+
+			</ul>
+		</div>
+
+	</nav>
+
+
+<section class="faixa-titulo">
+	<div class="container">	
+		<h1>GIT - Guia para Consulta Rápida:</h1>	
+	</div>
+</section>
+<div class="cor2"></div>
+
+<div class="container">
+	<!--<img id="icone" src="git.ico" alt="">-->
+	
+		
+		<a name="iniciando"><h2>Iniciando o Git</h2></a>
+	
+		<p>Dentro da pasta a ser usada executar <code>git ini</code></p><br>
+		<p>Usar o comando <code>git add + nomedoarquivo</code></p><br>
+		<p>Depois usar <code>git commit -m + "Descrição do que foi alterado entre aspas"</code></p><br>
+		<p>Para enviar as alterações ao GitHub <code>git push origin master</code></p><small>Onde "origin" refere-se ao GitHub  e "master" é o nosso repositório local.<br></small>
+	
+</div>
+
+<section class="faixa">	
+	<div class="container">
+		<blockquote cite="Márcio Navegantes">
+			<p>"Espere no Senhor. Seja forte! Coragem! Espere no Senhor."</p><p><small>Salmos 27:14</small></p>
+		</blockquote>
+	</div>
+</section>
+<div class="cor2"></div>
+
+<div class="container">
+	<section class="texto">
+
+		<a name="sincro"><h2>Igualando o Repositório Local ao GitHub</h2></a>
+
+		<p>É preciso linkar a branch local com a brach remota, para que o GitHub entenda que estou adicionando conteúdo a uma branch que ele já possui. Por isso preciso de um comando que diga que eu estou lhe enviando uma nova branch que foi criada em meu repositório local.</p><p><code>git push <b> -u </b> origin design</code> Para uma branch com nome "design".</p>
+		<p>Agora posso usar <code>git pull</code>dentro de minha brach local para trazer consteúdo que possa ter sido incluído no GitHub por outro usuário</p><br><br>
+
+		<p><code>Git branch -r</code> Exibe as branchs remotas que estão mapeadas.</p>
+		<p>Se usar <code>git pull</code> podemos ver se há alguma branch remota que ainda não foi mapeada.</p><br><br>
+
+		<p>Se eu quiser incluir em meu repositório local uma branch que está no GitHub o comando será:<br><code>git branch -t design origin/design</code> Com isso crio uma nova branch chamada design que já estará linkada com a branch remota de mesmo nome. </p><br><br>
+
+		<p>Agora posso usar inclusive <code>git log</code> para ver as alterações realizadas por outros usuários.</p>
+	
+	</section>
+</div>
+<section class="faixa2">
+	<div class="container">
+			<blockquote cite="Márcio Navegantes">
+				<p>"Sempre em frente! Não temos tempo a perder."</p><p><small>Renato Russo</small></p>
+			</blockquote>
+		</div>
+</section>
+<div class="cor2"></div>
+
+<div class="container">
+	<a name="merge"><h2>Merge Automático</h2></a>
+	<section class="texto">
+		<p> Para evitar conflitos o Git pode executar um "Merge" no arquivo. Nesse caso ele exibe uma mensagem avisando que isso ocorreu. Caso não consiga ele exibe um erro. Nesse caso será preciso fazer um <code>git pull</code> e corrigir o arquivo manualmente.</p>
+		<p>Após o arquivo corrigido, fazer um <code>git push</code> Para enviar ao GitHub o arquivo corrigido.</p>
+	
+		<a name="boas"><h2>Boas Práticas Para Evitar Conflitos:</h2></a>
+
+		<p>É preciso seguir um fluxo de trabalho bem defnido afim de evitar conflitos registrados no log.</p>
+		<p>Para isso preciso sempre checar se há alguma alteração no arquivo que eu estou modificando e caso haja realizar um "merge" local. Enviando somente após isso o arquivo atualizado ao GitHub.</p><br>
+
+		<p>O processo para que isso aconteça é o seguinte:</p><br>
+		
+		<p>Criar uma branch local para trabalhar. Não é recomendado trabalhar direto na branch "Master".</p>
+		<p><code>git checkout -b desenvolvimento</code> Cria uma branch chamada desenvolvimento e já muda direto pra ela.</p>
+		<p>Torna-se necessário então transportar as alterações reapzadas na branch "desenvolvimento" para a branch "Master".</p>
+		<p>O primeiro passo é checar se a branch "Master" local que está conectada a branch remota, possui nova atuapzação. Alguma modificação feita enquanto trabalhávamos localmente.</p>
+		Executar então: <code>git checkout master</code> para mudar para a branch "Master" e depois <br><code>git pull</code> para buscar novas alterações feitas por outras pessoas.
+		<p>Se não ocorreram novas alterações no arquivo remoto, executar <code>git merge</code>. Dessa forma eu sincronizo o conteúdo da branch local "desenvolvimento" com a branch "Master" que via de regra é a branch usada por outros usuários remotos.</p>
+		<p><code>git push</code> Para sincronizar branch "Master" local com a branch "Master" remota.</p>
+
+
+		<h2>Evitando Merges Automáticos</h2> 
+
+		<p>Se for verificado que há novas alterações na branch "Master" que não usamos como base para o  denvolvimento de nosso arquivo, teremos um problema a resolver.</p>
+		<p>É nesse momento que caso simplesmente joguemos nosso conteúdo no "Master" ocorrerão merges automáticos. É isso que queremos evitar.</p>
+		<p>Devemos então usar o comando <code>git rebase</code>. Dessa forma poderemos indicar uma nova base de commits e resolver os possíveis conflitos commit por commit.</p><br>
+
+		<p>Para realizar esse procedimento devemos estar então na branch desenvolvimento.</p><p> <code>git checkout desenvolvimento</code>. E informar que a nova base dela é o último commit realizado na branch "Master". <code>git rebase master desenvolvimento</code></p>
+		<p>Feito isso, os commits realizados em desenvolvimento são movidos para uma branch temporária e o git atualiza a nova base de commits. Após essa atualização, o próprio Git traz de volta os commits que realizamos e os aplica sobre a nova base, um de cada vez.</p>
+		<p>Nesse momento, todos os commits estão aplicados e organizados na branch "desenvolvimento".</p><br>
+
+		<p>Agora, é necessário levar esses commits para a branch "master". Repare que é um processo diferente do rebase, onde apenas queríamos trocar a base de commits utilizada. Agora, é necessário colocar apenas os commits novos na branch "master", porém, para isso, existe o comando <br> <code>git merge</code> que move os commits de uma determinada branch para outra branch.</p>
+		<p>Para utilizá-lo, primeiro é preciso ir para a branch para a qual se quer levar os commits, no caso, a "master" <code>git checkout master</code>.</p>
+		<p>Em seguida, deve-se dizer para o comando git merge de qual branch virão os commits novos, que, no caso, é a branch "desenvolvimento". Para isso, basta executar <code>git merge desenvolvimento</code>.</p>
+		<p>Nesse instante, tem-se todos os novos commits na branch "master", prontos para serem enviados para o repositório remoto através do comando <code>git push</code>.</p>
+	</section>
+</div>
+
+
+<section class="faixa3">
+	<div class="container">
+		<blockquote cite="Márcio Navegantes">
+			<p>"Não importa o que eu diga, creia e faça; sem amor, estou arruinado."</p><p><small>Coríntios 13.3b</small></p>
+		</blockquote>
+	</div>
+</section>
+<div class="cor2"></div>
+
+
+<div class="container texto">
+
+<a name="controle"><h2>Controle Avançado de Alterações</h2></a>
+
+<p>Caso eu tenha salvo um arquivo sem ter adicionado para commit ou realizado commit e quiser retroná-lo ao estado do último commit realizado, devo usar o comando: <br>
+<code>git checkout exemplo.html</code><br>
+Onde "exemplo.html" é o nome do arquivo que desejo reverter ao estado do último commit.</p><br>
+
+<p></p>
+
+
+</div>
+
+<div class="cor2"></div>
+<footer>
+	
+	<div class="icones-rodape container">
+		<ul>
+			<li><img src="img/git.ico" alt="icone do github"></li>
+			<li><img src="img/git.ico" alt="icone do github"></li>
+			<li><img src="img/git.ico" alt="icone do github"></li>
+		</ul>
+	</div>
+
+</footer>
+
+</body>
+</html>

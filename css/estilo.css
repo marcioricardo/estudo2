@@ -1,0 +1,152 @@
+body{
+	background-color: #013C56;
+	text-align: left;
+	color: lightgray;
+	font-size: 16px;
+	line-height: 2;
+	font-family: Verdana;
+}
+
+.container-fluid{
+	width: 840px;
+	text-align: left;
+	margin: 20px auto;
+}
+
+/*#icone{
+	float: left;
+	position: relative;
+	width: 80px;
+} */
+
+.faixa-titulo{
+	background-color: white;
+	padding: 3px 0;
+	margin-top: 80px;
+}
+
+.cor2{
+	background-color: #FF3100;
+	padding: 2px 0;
+}
+
+h1{
+	font-family: Tahoma;
+	color: #013C56;
+	font-weight: bolder;
+	font-size: 40px;	
+}
+
+.navbar{
+	background-color: #013C56;
+	margin-bottom: 60px; 
+}
+
+.navbar div ul {
+	float: right;
+}
+
+.navbar div ul li{
+	padding: 0 10px;
+	background-color: #013C56;
+	text-align: right;
+	font-size: 14px;
+}
+
+.navbar div ul li:hover{
+	background-color: #0476A7;
+	border-radius: 12px;
+	box-shadow: 0px 4px 10px rgba(255,255,255,0.2);
+}
+
+.navbar div ul li:active{
+	background-color: #0476A7;
+}
+
+code{
+	background-color: white;
+	color: #000000;
+	font-size: 18px;
+	border-radius: 8px;
+	padding: 1px 8px;
+	margin: 0 5px;
+}
+
+.faixa{
+	background: url(../img/2304.JPG) no-repeat center fixed;
+	background-size: cover;
+	background-color: white;
+	padding: 110px 0;
+	
+}
+
+.faixa2{
+	background: url(../img/colorful-sneakers.jpg) no-repeat center fixed;
+	background-size: cover;
+	padding: 110px 0;
+	
+}
+
+.faixa3{
+	background: url(../img/car-in-the-beach.jpg) no-repeat center fixed;
+	background-size: cover;
+	padding: 80px 0;
+	
+}
+
+h2{
+	text-align: left;
+	color: #FFB700;
+	font-weight: bold;
+	font-size: 28px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+h3{
+	text-align: right;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+blockquote{
+	border: none;
+}
+
+
+blockquote p{
+	text-align: right;
+	font-size: 40px;
+	font-weight: bolder;
+	font-family: Verdana;
+	color: white;
+	padding: 0;
+}
+
+blockquote p small{
+	text-align: right;
+	font-size: 20px;
+	color: white;
+	font-style: italic;
+}
+
+
+footer{
+	background-color: #FFB700;
+	padding: 30px 0;
+}
+
+.icones-rodape{
+	text-align: center;
+}
+
+.icones-rodape ul li{
+	display: inline-block;
+	margin: 0 40px;
+}
+
+.icones-rodape ul li img{
+	
+	width: 50px;
+}
