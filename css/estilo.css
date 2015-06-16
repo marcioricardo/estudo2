@@ -1,44 +1,49 @@
 body{
-	background-color: #013C56;
+	background-color: #E9E9E9;
 	text-align: left;
-	color: lightgray;
+	color: #494949;
 	font-size: 16px;
-	line-height: 2;
+	line-height: 1.75;
 	font-family: Verdana;
 }
 
 .container-fluid{
 	width: 840px;
 	text-align: left;
-	margin: 20px auto;
+	margin: 10px auto;
 }
 
-/*#icone{
+#icone{
 	float: left;
 	position: relative;
-	width: 80px;
-} */
+	width: 70px;
+	margin: 3px 20px 3px 0;
+
+} 
 
 .faixa-titulo{
 	background-color: white;
-	padding: 3px 0;
-	margin-top: 80px;
+	padding: 1px 0;
+	margin-top: 60px;
+	margin-bottom: 0;
 }
 
 .cor2{
 	background-color: #FF3100;
 	padding: 2px 0;
+	margin:0;
 }
 
 h1{
 	font-family: Tahoma;
 	color: #013C56;
 	font-weight: bolder;
-	font-size: 40px;	
+	font-size: 32px;
+
 }
 
 .navbar{
-	background-color: #013C56;
+	background-color: #034562;
 	margin-bottom: 60px; 
 }
 
@@ -47,20 +52,27 @@ h1{
 }
 
 .navbar div ul li{
-	padding: 0 10px;
-	background-color: #013C56;
-	text-align: right;
-	font-size: 14px;
+	padding: 0 5px;
+	background-color: #034562;
 }
 
 .navbar div ul li:hover{
-	background-color: #0476A7;
-	border-radius: 12px;
-	box-shadow: 0px 4px 10px rgba(255,255,255,0.2);
+	background-color: #046691;
+	/*box-shadow: 0px 0px 8px rgba(255,255,255,0.3);*/
+	font-size: 15px;
 }
 
 .navbar div ul li:active{
 	background-color: #0476A7;
+}
+
+.navbar div ul li a{
+	color: white;
+	font-size: 13px;
+}
+
+.navbar-brand {
+	margin: 0;
 }
 
 code{
@@ -96,7 +108,7 @@ code{
 
 h2{
 	text-align: left;
-	color: #FFB700;
+	color: #f05133;
 	font-weight: bold;
 	font-size: 28px;
 	margin-top: 40px;
@@ -121,6 +133,7 @@ blockquote p{
 	font-weight: bolder;
 	font-family: Verdana;
 	color: white;
+	text-shadow: 2px 2px 2px #000000;
 	padding: 0;
 }
 
@@ -143,10 +156,21 @@ footer{
 
 .icones-rodape ul li{
 	display: inline-block;
-	margin: 0 40px;
+	margin-right: 40px;
 }
 
 .icones-rodape ul li img{
-	
-	width: 50px;
+	width: 40px;
+}
+
+.ancora1:hover{
+	text-decoration: none;
+}
+
+.ancora2:hover{
+	text-decoration: none;
+}
+
+.ancora:hover{
+	text-decoration: none;
 }
