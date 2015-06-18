@@ -131,8 +131,22 @@
 		<p><br>
 
 		<code>git push</code> Para sincronizar branch "Master" local com a branch "Master" remota.</p>
+	</section>
+</div>
+
+<section class="faixa3">
+	<div class="container-fluid">
+		<blockquote cite="Márcio Navegantes">
+			<p>"Não importa o que eu diga, creia e faça; sem amor, estou arruinado."</p><p><small>Coríntios 13.3b</small></p>
+		</blockquote>
+	</div>
+</section>
+<div class="cor2"></div>
 
 
+<div class="container-fluid">
+	<section class="texto">
+		
 		<h2>Evitando Merges Automáticos</h2> 
 
 		<p>Se for verificado que há novas alterações na branch "Master" que não usamos como base para o  denvolvimento de nosso arquivo, teremos um problema a resolver.</p>
@@ -145,16 +159,17 @@
 
 		<p>Agora, é necessário levar esses commits para a branch "master". Repare que é um processo diferente do rebase, onde apenas queríamos trocar a base de commits utilizada. Agora, é necessário colocar apenas os commits novos na branch "master", porém, para isso, existe o comando <br> <code>git merge</code> que move os commits de uma determinada branch para outra branch.</p>
 		<p>Para utilizá-lo, primeiro é preciso ir para a branch para a qual se quer levar os commits, no caso, a "master" <code>git checkout master</code>.</p>
-		<p>Em seguida, deve-se dizer para o comando git merge de qual branch virão os commits novos, que, no caso, é a branch "desenvolvimento". Para isso, basta executar <code>git merge desenvolvimento</code>.</p>
+		<p>Em seguida, deve-se dizer para o comando git merge de qual branch virão os commits novos, que, no caso, é a branch "desenvolvimento". Para isso, basta executar: <br>
+		<code>git merge desenvolvimento</code>.</p>
 		<p>Nesse instante, tem-se todos os novos commits na branch "master", prontos para serem enviados para o repositório remoto através do comando <code>git push</code>.</p>
 	</section>
 </div>
 
 
-<section class="faixa3">
+<section class="faixa4">
 	<div class="container-fluid">
 		<blockquote cite="Márcio Navegantes">
-			<p>"Não importa o que eu diga, creia e faça; sem amor, estou arruinado."</p><p><small>Coríntios 13.3b</small></p>
+			<p>"Todos os seus sonhos podem se tornar realidade se você tem coragem para persegui-los" </p><p><small>Walt Disney, desenhista e empreendedor</small></p>
 		</blockquote>
 	</div>
 </section>
